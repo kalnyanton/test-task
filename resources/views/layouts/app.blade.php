@@ -11,9 +11,15 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
+            @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @endif
     </head>
     <body>
-        Test Task
+        @if (!file_exists(public_path('build/manifest.json')) && !file_exists(public_path('hot')))
+            <div style="background-color: red; color: white;">{{ __('Please, run "npm run build" command (see README.md)') }}</div>
+        @endif
+
+        @yield('content')
     </body>
 </html>

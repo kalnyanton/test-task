@@ -9,3 +9,76 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+label, input, button {
+    display: flex;
+}
+
+input {
+    border: 1px solid gray;
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+input.is-invalid {
+    border: 1px solid red;
+}
+
+button, .button {
+    background-color: lightgray;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+.error-box {
+    font-size: 12px;
+    color: red;
+}
+
+.game-wrapper {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    align-items: center;
+}
+
+.game-button {
+    background-color: darkgreen;
+    color: white;
+}
+
+.history-table {
+    width: 30%;
+}
+
+.game-result-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.game-result {
+    font-size: 32px;
+}
+
+.game-amount {
+    font-size: 20px;
+}
+
+p.note {
+    margin: 10px;
+}
